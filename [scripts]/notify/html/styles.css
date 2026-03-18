@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap%22");
+body {
+    margin-top: 40vh; 
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.notify {
+    width: 80px;
+    margin-left: 95vw;
+}
+
+.wrapper {
+    width: 100px;
+    height: auto;
+    background-color: #1e1e1e;
+    float: right;
+}
+
+.main {
+    margin: 12px 16px 12px 65px;
+    position: relative;
+}
+
+.main::before {
+    top: calc(50% - 13px); 
+    left: -50px;
+    position: absolute;
+    background: rgb(31, 31, 31);
+    padding: 15px;
+    width: 0.85vw; 
+    height: 0.85vw;
+    font-size: 17px;
+    border-radius: 50%;
+    margin-left: -10px; 
+    margin-top: -10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/*---[ SUCCESS NOTIFY ]---*/
+
+.success-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color: #069a19;
+    border-radius: 20%;
+}
+
+.success {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ bluish NOTIFY ]---*/
+
+.bluish-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f017";
+    color: #ff0055;
+    border-radius: 20%;
+}
+
+.bluish {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ INFORMATION NOTIFY ]---*/
+
+.info-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0f3";
+    color: #ffffff;
+    border-radius: 20%;
+}
+
+.info {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ WARNING NOTIFY ]---*/
+
+.warning-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f071";
+    color: #ffc107;
+    border-radius: 20%;
+}
+
+.warning {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ ERROR NOTIFY ]---*/
+
+.error-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00d";
+    color: #ff2121;
+    border-radius: 20%;
+}
+
+.error {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ NEW SMS NOTIFY ]---*/
+
+.sms-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1d8";
+    color: #01a2dc;
+    border-radius: 20%;
+}
+
+.sms {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ LONG MESSAGE NOTIFY ]---*/
+
+.long-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c7";
+    color: #ffffff;
+    border-radius: 20%;
+}
+
+.long {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/*---[ VEHICLE MESSAGE NOTIFY ]---*/
+
+.locked {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.locked-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f023";
+    color: #ffc107;
+    border-radius: 20%;
+}
+
+.unlocked {
+    background: linear-gradient(282deg, rgba(22, 22, 22, .05) 40.96%, rgba(22, 22, 22, .03) 59.04%), linear-gradient(90deg, #111 0%, rgba(17, 17, 17, .6) 100%);
+    border: 2.5px solid rgba(95, 95, 95, .4);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.unlocked-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f3c1";
+    color: #ffc107;
+    border-radius: 20%;
+}

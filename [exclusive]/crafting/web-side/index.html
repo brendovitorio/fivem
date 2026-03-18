@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Creative Network</title>
+		<link href="css.css" rel="stylesheet" type="text/css"/>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+		<script src="https://kit.fontawesome.com/47ea8dbd0f.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="inventory">
+			<div class="innerInventory">
+				<div id="weight">
+					<div style="float: left; width: 40rem;">
+						<div id="weightTextLeft"></div>
+						<div id="weightBarLeft"></div>
+					</div>
+					<div style="float: right; width: 40rem;">
+						<img class='searchIcon' src='search-solid.png'/>
+						<input class='craftSearch' type='text' placeholder='Buscar'></input>
+					</div>
+				</div>
+				<div class="sections">
+					<div class="invLeft"></div>
+					<div class="invMiddle">
+						<input class="amount" placeholder="QUANTIDADE" type="number" onKeyPress="if(this.value.length==9) return false;" maxlength="9" />
+						<img class="use" src="use.png" style="margin: 4rem auto;width: 6rem;">
+						<div class="send">ENVIAR</div>
+					</div>
+					<div class="invRight"></div>
+				</div>
+			</div>
+		</div>
+		<script src="jquery.js"></script>
+	</body>
+</html>

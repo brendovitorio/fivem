@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revolt Police MDT</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🛡️</div>
+        <div>
+          <div class="brand-title">Revolt Police MDT</div>
+          <div class="brand-subtitle" id="officerSubtitle">Carregando oficial...</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="refreshBtn">⟳</button>
+        <div class="badge-pill" id="notifBadge">0</div>
+        <button class="icon-btn close" id="closeBtn">✕</button>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

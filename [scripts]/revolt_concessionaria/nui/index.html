@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REVOLT Concessionária</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-badge">R</div>
+          <div>
+            <h1>REVOLT Conce</h1>
+            <p>Concessionária</p>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="text" placeholder="Buscar veículo..." />
+        </div>
+
+        <div class="tab-list">
+          <button class="tab-btn active" data-tab="store">Loja</button>
+          <button class="tab-btn" data-tab="owned">Meus veículos</button>
+          <button class="tab-btn" data-tab="top">Destaques</button>
+        </div>
+
+        <div class="filters">
+          <label>Classe</label>
+          <select id="classFilter">
+            <option value="all">Todas</option>
+          </select>
+        </div>
+
+        <div class="info-box">
+          <span id="discountBadge">Desconto ativo: 0%</span>
+          <small>Compras, aluguel, venda e test drive.</small>
+        </div>
+
+        <button id="closeBtn" class="ghost full">Fechar</button>
+      </aside>
+
+      <main class="content">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Concessionária REVOLT</p>
+            <h2 id="heroTitle">Selecione um veículo</h2>
+            <p id="heroSubtitle">Escolha um veículo para ver detalhes, comprar, alugar ou iniciar test drive.</p>
+          </div>
+          <div class="hero-actions">
+            <button id="buyBtn" class="primary">Comprar</button>
+            <button id="rentBtn" class="secondary">Alugar</button>
+            <button id="testBtn" class="secondary">Test Drive</button>
+            <button id="sellBtn" class="danger hidden">Vender</button>
+          </div>
+        </section>
+
+        <section class="details-card">
+          <div class="vehicle-preview">
+            <img id="vehicleImage" alt="vehicle" />
+          </div>
+          <div class="vehicle-meta">
+            <div class="chips">
+              <span id="chipClass" class="chip">classe</span>
+              <span id="chipStock" class="chip">estoque</span>
+              <span id="chipCapacity" class="chip">porta-malas</span>
+            </div>
+            <div class="price-line">
+              <strong id="vehiclePrice">$ 0</strong>
+              <span id="vehicleModel">modelo</span>
+            </div>
+            <div class="color-row">
+              <label for="colorInput">Cor RGB</label>
+              <input id="colorInput" value="255,255,255" />
+            </div>
+            <div class="vehicle-desc" id="vehicleDesc">
+              Clique em um card abaixo para carregar as informações.
+            </div>
+          </div>
+        </section>
+
+        <section class="grid-wrap">
+          <div id="vehicleGrid" class="vehicle-grid"></div>
+          <div id="emptyState" class="empty hidden">Nenhum veículo encontrado.</div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="adminApp" class="hidden">
+    <div class="backdrop"></div>
+    <div class="admin-panel">
+      <h3>Gerenciamento REVOLT Conce</h3>
+      <div class="admin-row">
+        <input id="adminVehicle" type="text" placeholder="spawn do veículo" />
+        <input id="adminQtd" type="number" min="1" placeholder="quantidade" />
+      </div>
+      <div class="admin-actions">
+        <button data-admin="add" class="primary">Adicionar</button>
+        <button data-admin="remove" class="danger">Remover</button>
+        <button data-admin="update" class="secondary">Atualizar</button>
+        <button id="adminClose" class="ghost">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="timerBox" class="timer-box hidden">
+    <span>TEST DRIVE</span>
+    <strong id="timer">00:00</strong>
+    <button id="endTestBtn" class="ghost small">Encerrar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

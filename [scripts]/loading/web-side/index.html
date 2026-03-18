@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página com Vídeo de Fundo e Música</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-background {
+            top: 0;
+	        left: 0;
+	        width: 100vw;
+	        height: 100vh;
+	        position: fixed;
+	        object-fit: cover;
+        }
+
+        #content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+        }
+
+        #play-button,
+        #pause-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 3px 10px gray;
+            border-radius: 30px;
+            opacity: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay loop>
+        <source src="http://127.0.0.1/loading/video2.mp4" type="video/mp4">
+        <!-- Adicione outros formatos de vídeo aqui caso necessário -->
+    </video>
+
+
+
+    <audio id="background-music" autoplay loop>
+        <source id="audio-source" type="audio/mp3">
+        <!-- Adicione outros formatos de áudio aqui caso necessário -->
+    </audio>
+    
+    <script>
+        // Lista de URLs das músicas
+        const musicList = [
+            "http://191.96.225.201/loading/loading1.mp3",
+            "http://191.96.225.201/loading/loading2.mp3",
+
+        ];
+    
+        // Função para escolher um índice aleatório da lista
+        function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+    
+        // Selecionar uma música aleatória da lista
+        const randomIndex = getRandomIndex(musicList.length);
+        const audioSource = document.getElementById("audio-source");
+        audioSource.src = musicList[randomIndex];
+    
+        // Atualizar a origem do áudio e reproduzir
+        const backgroundMusic = document.getElementById("background-music");
+        backgroundMusic.load();
+        backgroundMusic.volume = 0.2;
+        backgroundMusic.play();
+    </script>
+
+    <img id="play-button" src="play.png" width="50px" onclick="playMusic()" style="margin-top:2%; margin-left: 2%;">
+    <img id="pause-button" src="pause.png" width="50px" onclick="pauseMusic()" style="display: none; margin-top:2%; margin-left: 2%;">
+
+
+    <script>
+        var music = document.getElementById('background-music');
+        var playButton = document.getElementById('play-button');
+        var pauseButton = document.getElementById('pause-button');
+
+        function playMusic() {
+            music.play();
+            playButton.style.display = 'none';
+            pauseButton.style.display = 'inline';
+        }
+
+        function pauseMusic() {
+            music.pause();
+            playButton.style.display = 'inline';
+            pauseButton.style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            playMusic();
+        });
+
+        document.body.onkeyup = function(e) {
+            if (e.keyCode == 32) { // Tecla Espaço
+                if (music.paused) {
+                    playMusic();
+                } else {
+                    pauseMusic();
+                }
+            }
+        };
+    </script>
+</body>
+</html>

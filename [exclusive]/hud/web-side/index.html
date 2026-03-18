@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuff HUD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/hud.css" />
+</head>
+<body>
+  <div id="hud" class="hud hidden">
+    <div class="hud-logo">
+      <img src="./assets/revolt-logo.png" alt="HUD Logo" />
+    </div>
+    <section class="map-hud">
+      <div class="street-bar">
+        <div class="compass-wrap">
+          <span class="compass-icon icon-compass"></span>
+          <span id="direction">NW</span>
+        </div>
+        <div id="streetText" class="street-name">VESPUCCI BLVD - LA MESA</div>
+      </div>
+
+      <div class="map-frame">
+        <div class="map-cutout"></div>
+      </div>
+
+      <div class="map-bottom">
+        <div class="health-hex">
+          <svg class="health-svg" viewBox="0 0 100 100" aria-hidden="true">
+            <!-- borda externa -->
+            <polygon class="hex-outer" points="25,3 75,3 100,50 75,97 25,97 0,50"></polygon>
+
+            <!-- fundo interno -->
+            <polygon class="hex-inner-bg" points="27,7 73,7 95,50 73,93 27,93 5,50"></polygon>
+
+            <!-- trilho do contorno -->
+            <polygon class="hex-life-track" points="27,7 73,7 95,50 73,93 27,93 5,50"></polygon>
+
+            <!-- vida -->
+            <polygon id="healthFill" class="hex-life-fill" points="27,7 73,7 95,50 73,93 27,93 5,50"></polygon>
+          </svg>
+
+          <div class="health-hex-inner">
+            <span class="heart-svg"></span>
+          </div>
+
+        </div>
+
+        <div class="info-stack">
+          <div class="essentials-row">
+            <div class="mini-info">
+              <span class="small-icon icon-clock"></span>
+              <span id="timeText">12:11 PM</span>
+            </div>
+            <div class="mini-info">
+              <span class="small-icon icon-weather"></span>
+              <span id="weatherText">CLEAR</span>
+            </div>
+          </div>
+
+          <div class="status-row">
+            <div class="stat-card armor">
+              <div class="stat-card-inner">
+                <span class="status-svg armor-svg"></span>
+                <span id="armorValue">100</span>
+              </div>
+              <div class="stat-progress-track"></div>
+              <div id="armorFill" class="stat-progress-fill"></div>
+            </div>
+            <div class="stat-card hunger">
+              <div class="stat-card-inner">
+                <span class="status-svg food-svg"></span>
+                <span id="hungerValue">100</span>
+              </div>
+              <div class="stat-progress-track"></div>
+              <div id="hungerFill" class="stat-progress-fill"></div>
+            </div>
+            <div class="stat-card thirst">
+              <div class="stat-card-inner">
+                <span class="status-svg water-svg"></span>
+                <span id="thirstValue">100</span>
+              </div>
+              <div class="stat-progress-track"></div>
+              <div id="thirstFill" class="stat-progress-fill"></div>
+            </div>
+            <div class="stat-card stress">
+              <div class="stat-card-inner">
+                <span class="status-svg stress-svg"></span>
+                <span id="stressValue">100</span>
+              </div>
+              <div class="stat-progress-track"></div>
+              <div id="stressFill" class="stat-progress-fill"></div>
+            </div>
+            <div class="tiny-bars" id="voiceBars"></div>
+          </div>
+
+          <div class="stamina-line">
+            <div class="stamina-track"></div>
+            <div id="staminaFill" class="stamina-fill"></div>
+            <span id="staminaMarker" class="stamina-marker icon-triangle"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speedWrap" class="vehicle-hud hidden-soft">
+      <div class="vehicle-controls">
+        <div class="control-box" id="engineControl">
+          <span class="control-icon engine-svg"></span>
+          <span class="control-dot"></span>
+        </div>
+        <div class="control-box" id="seatbeltControl">
+          <span class="control-icon seatbelt-svg"></span>
+          <span class="control-dot"></span>
+        </div>
+        <div class="control-box" id="doorControl">
+          <span class="control-icon door-svg"></span>
+          <span class="control-dot"></span>
+        </div>
+      </div>
+
+      <div class="speedometer">
+        <div class="speed-top">
+          <div class="speed-reading">
+            <span id="speedHundreds" class="speed-leading">0</span><span id="speedRest" class="speed-main">95</span>
+          </div>
+          <div id="gearValue" class="gear-box">N</div>
+          <div class="unit-box">KM/H</div>
+        </div>
+        <div id="rpmBars" class="rpm-bars"></div>
+      </div>
+
+      <div class="fuel-gauge">
+        <div class="fuel-track"></div>
+        <div id="fuelFill" class="fuel-fill"></div>
+        <div class="fuel-points">
+          <span class="fuel-point top"></span>
+          <span class="fuel-point mid"></span>
+          <span class="fuel-point bottom"></span>
+        </div>
+        <span class="fuel-icon fuel-svg"></span>
+      </div>
+    </section>
+  </div>
+  <script src="./assets/hud.js"></script>
+</body>
+</html>

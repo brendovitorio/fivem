@@ -1,0 +1,2 @@
+FRAMEWORK = FRAMEWORK or {}
+FRAMEWORK.client = FRAMEWORK.client or {}

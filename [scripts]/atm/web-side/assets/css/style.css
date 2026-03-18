@@ -1,0 +1,247 @@
+body {
+  display: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+p {
+  margin: 0;
+}
+.material-icons {
+  font-size: 1vw;
+  vertical-align: middle;
+}
+#background {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#code {
+  display: none;
+  height: 447px;
+  width: 455px;
+  background: url('../images/code_background.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 58px 9px rgba(0,0,0,0.6);
+  z-index: 100;
+}
+#code h1 {
+  height: 69px;
+  color: #444;
+  margin: 60px 10px 29px 83px;
+  letter-spacing: 60px;
+}
+#code #small {
+  float: left;
+  width: 250px;
+  margin-left: 21px;
+}
+#code #small li {
+  margin-bottom: 14px;
+  margin-right: 10px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  width: 68px;
+  height: 53px;
+  background: url('../images/button.png');
+}
+li {
+    outline: none !important;
+    user-select: none !important;
+}
+#code #small li:active {
+  background: url('../images/button_active.png');
+}
+#code #large {
+  width: 145px;
+  float: right;
+  margin-right: 19px;
+}
+#code #large li {
+  margin-bottom: 14px;
+  display: list-item;
+  width: 145px;
+  height: 53px;
+  background: url('../images/button_cancel.png');
+}
+#code #large li:active {
+  background: url('../images/button_cancel_active.png');
+}
+#code #large li:nth-child(2) {
+  background: url('../images/button_wrong.png');
+}
+#code #large li:nth-child(2):active {
+  background: url('../images/button_wrong_active.png');
+}
+#code #large li:nth-child(3) {
+  margin-top: 82px;
+  background: url('../images/button_done.png');
+}
+#code #large li:nth-child(3):active {
+  background: url('../images/button_done_active.png');
+}
+
+#buttons {
+  position: absolute;
+  height: 23vh;
+  width: 28vw;
+  top: 56%;
+  left: 45.5%;
+  transform: translate(-50%, -50%);
+}
+#buttons li {
+  width: 1.5vw;
+  height: 3vh;
+  margin-bottom: 2vh;
+}
+#display {
+  display: none;
+  position: absolute;
+  width: 24%;
+  height: 31%;
+  top: 55%;
+  left: 45.26%;
+  transform: translate(-50%, -50%);
+}
+
+
+#display #header {
+  width: 100%;
+  height: 18.5%;
+  font-weight: bold;
+}
+
+#display #header img {
+  height: 100%;
+}
+
+#display #header p {
+  float: right;
+  font-size: 1.2vw;
+  margin-top: 1vh;
+  margin-right: 0.3vw;
+  color: white;
+}
+
+#display li {
+  background: #104a65;
+  padding: 0.5% 0;
+  font-size: 2vh;
+  height: 1%;
+  margin: 1.5vh 0;
+  color: white;
+}
+
+#display li:nth-child(odd) {
+  margin-top: 2%;
+}
+
+#display span:nth-child(odd) {
+  text-align: right;
+  float: right;
+}
+
+#take {
+  display: none;
+  margin: 0;
+}
+
+#loading {
+  display: none;
+  position: absolute;
+  width: 24%;
+  height: 21%;
+  top: 55%;
+  left: 45.25%;
+  transform: translate(-50%, -50%);
+}
+
+#error {
+  display: none;
+  position: absolute;
+  width: 24%;
+  height: 21%;
+  top: 55%;
+  left: 45.25%;
+  transform: translate(-50%, -50%);
+}
+
+#insert {
+  display: none;
+  margin: 0;
+}
+
+#code-button {
+  position: absolute;
+  top: 88.5%;
+  left: 45.5%;
+  height: 10.5%;
+  width: 12.5%;
+  transform: translate(-50%, -50%);
+}
+
+#card {
+  transition: bottom 1s ease;
+  position: absolute;
+  bottom: -21.5%;
+  left: 65.7%;
+  height: 12.5%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#welcome {
+  position: absolute;
+  width: 24%;
+  height: 21%;
+  top: 55%;
+  left: 45.25%;
+  transform: translate(-50%, -50%);
+}
+
+.card-anim {
+  bottom: 31.5% !important;
+}
+
+#money {
+  display: none;
+  position: absolute;
+  left: 44.44%;
+  top: 78.95%;
+  width: 18.75%;
+  height: 16%;
+  transform: translate(-50%, -50%);
+}
+
+#receipt {
+  display: none;
+  position: absolute;
+  top: 36.9%;
+  left: 65.3%;
+  height: 16%;
+  width: 10.5%;
+  transform: translate(-50%, -50%);
+}
+
+#cardflash {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 50.8%;
+  left: 65.8%;
+  height: 12.22%;
+  width: 9.11%;
+  transform: translate(-50%, -50%);
+}

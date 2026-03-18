@@ -1,0 +1,13 @@
+Arquivos ajustados:
+- resource renomeado para revolt_concessionaria
+- NUI refeita em HTML/CSS/JS funcional para FiveM
+- nation_* -> revolt_* no recurso
+- variáveis vRP -> rEVOLT / VRP -> REVOLT onde aplicável
+- fxmanifest com @revolt/lib/Utils.lua
+- SQL separado em db_revolt_concessionaria.sql
+- correções extras:
+  - export -> exports em getVehList
+  - SetEntitySomething removido
+  - nearestConce corrigido
+  - damage em client_config corrigido
+  - delete de aluguel expirado corrigido
